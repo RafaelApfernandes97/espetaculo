@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pastas de Fotos do Evento</title>
+</head>
+<body>
+    <h1>Pastas de Fotos do Evento</h1>
+    <ul>
+        {% for folder in folders %}
+        <li><a href="{{ url_for('show_photos', event_id=event_id, folder_id=folder.id) }}">{{ folder.name }}</a>
+
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar para a lista de eventos</a>
+</body>
+</html>

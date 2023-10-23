@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens do Evento</title>
+</head>
+<body>
+
+<h1>Imagens do Evento</h1>
+
+<div>
+    {% for image in images %}
+        <img src="https://drive.google.com/uc?id={{ image.id }}" alt="{{ image.name }}" width="300">
+    {% endfor %}
+</div>
+
+</body>
+</html>

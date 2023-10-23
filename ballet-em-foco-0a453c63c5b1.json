@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ballet-em-foco",
+  "private_key_id": "0a453c63c5b14f21de05afedbb2adfb4e4fba5a1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDHfQ6bKcPr8avn\npG19bAz1nL2p7ytTpO7H74h36lB6qqOzMH1hmKRSWzx22vH7eRLB3q+S2kzoFvau\nha1pqpHAeUF6kB/WJCm1jiB/jl4aDoWz4ym+vUer9nIdgg2kXnTfZVGR5c9vrmX3\nh7w4TH12HeRscDu6kIr3Kjh9ge+H/bsOZI8CBzHimYHnnOUqiuvxaolbI2cwcKq3\nJS9naB/9EecUAgb9++gDQZ1TBFSVeqjZx/ACBivPxYSxQ4vYKCrQFrFD1g96emZZ\npCrzeVQxS1ulWaWuqOb50n0X4o5QBo6rNdriroUsSzBiQZBoUk7SlUCeBRTZRrcX\napK6cB6rAgMBAAECggEAAKqnUNdr4y70jxqajw+8X1m9vIKjF212qs5fG196E17c\nmy2vTZMwAWJyqkcDBf8ak/FFju0R0ri47E5gDPlX8Ve2Y011/cYzKXsnGqYEJHwl\n8DrzGcMSKT3ylayolQMHyvNQuXcWIV5o0tHuTBXdWXayG7aoTHBNNpQ6ihjUDxVF\ndNvi/z3U9Qa/SfWUJduupB3xAThSqUJSzTkzDXvGnW1fNN2XJSQopgoy3+fyFWzm\n46a1TaveW39/NE4Jiqk1OA8+FXTileaaw6jwe6RIua4/+d4XoXbPavjR+Z6TIbwF\nqauD9U2+UZdAd27gj3EAjA+P5QjEbDvkxnPV8/FckQKBgQD7ryc/CW7fX5I7cX/q\nRC8vv/MWM+lX28ZCXD3vYAbQKvr6PbHt4EkcwTbQ3pqOvdjXDIJi6T1YcruoAp4R\nDh8tbza/KMIGShFcghHzZcjiWFS9IcGDhaazvc6jT++C4gnbYqIL7leCoiRG5DAQ\nGAzA0xLW6JzT4lvEHNMUif3QIwKBgQDK6MY/dLQlFqlkBze9mpNC23PM+UE2ZQyH\nRweob537azzCejQH5TvOiFuOYMBJf/pKud68lH36rd3KNfZRD0vCnkonD2zTqu2F\ncQzKKW6N8YpO415Fv0mk4I8EhK0yz/++KfnxEL5RozO0FsyKdjCG6Sv2dFdarhKu\nxnGc1z0b2QKBgQCHuacCeYXO8+0aHVUL8oU3zN28ZXY6qQw7kR7dTf2emO8Lr+Wa\nEE+dMBzten4C6CJdpiNST9GDNyw3qGGxdNofWFA/ui0X0y2Vo5cmmQdB+LyJ2gBP\neu2xFHSw4VSaUmdaZdBZesi6a9IAYOICa9XEzo7kUkDwiqtOEPVLqDa13QKBgD4D\nB9uK0idnlptAbXOf0xOit/BT2O9D0KFjPt7mRdT5wBb7e/1RvIZxO/H2da3A1ACU\nb5MYmqvLCTZsaXv6fb/b2nO3jh3eZjrbAvqh0OzGfeuAJ2aPgHVIP800sy4NTW6T\nq5RV9qRCiWGnehly53/DsTDf+3Z2LrWFZmF1knJ5AoGBAKV2vn99Uty57CHfAGgb\n7ehPwOjzf9W8zBkP7S+SnP0VOzNf0hKDfxwrFpxmqRp+Tm6XXyupVeewJEXOFo0p\nbfvqoxG1ilDALyGsglRBX6w+IKFWjwTxK0UBWQOjRi16ntOj1iSAD5bbEagbGFxl\nfHg4QFxan/NPCY6zXucE7I0d\n-----END PRIVATE KEY-----\n",
+  "client_email": "ballet-em-foco@ballet-em-foco.iam.gserviceaccount.com",
+  "client_id": "112430957133679834546",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ballet-em-foco%40ballet-em-foco.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

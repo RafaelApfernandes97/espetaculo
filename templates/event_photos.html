@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Imagens da Pasta</title>
+
+    <style>
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            /* para centralizar a imagem caso ela seja menor que o contêiner */
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 20px; /* para dar um espaço entre as imagens */
+        }
+
+        .image-container {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="/copy_selected_images" method="post">
+        <ul>
+            {% for image in images %}
+            <li class="image-container">
+                <input type="checkbox" name="selected_images" value="{{ image.id }}">
+                <img src="https://drive.google.com/uc?export=view&id={{ image.id }}" alt="{{ image.name }}" class="responsive-image">
+            </li>
+            {% endfor %}
+        </ul>
+
+        <input type="text" name="phone_number" placeholder="Digite o número de telefone">
+
+        <input type="submit" value="Copiar Imagens Selecionadas">
+    </form>
+
+    
+
+</body>
+
+</html>
