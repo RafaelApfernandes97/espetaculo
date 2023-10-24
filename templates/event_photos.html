@@ -15,7 +15,8 @@
 
         li {
             list-style: none;
-            margin-bottom: 20px; /* para dar um espaço entre as imagens */
+            margin-bottom: 20px;
+            /* para dar um espaço entre as imagens */
         }
 
         .image-container {
@@ -23,26 +24,48 @@
             align-items: center;
         }
     </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function purchaseImages() {
+            const data = $('form').serialize();
+            $.post("/purchase_images", data, function (response) {
+                if (response.init_point) {
+                    window.location.href = response.init_point; // Redireciona para a URL de pagamento
+                } else {
+                    alert("Erro ao criar preferência de pagamento.");
+                }
+            });
+        }
+    </script>
 </head>
 
 <body>
 
-    <form action="/copy_selected_images" method="post">
+    <form action="/purchase_images" method="post">
         <ul>
             {% for image in images %}
             <li class="image-container">
                 <input type="checkbox" name="selected_images" value="{{ image.id }}">
-                <img src="https://drive.google.com/uc?export=view&id={{ image.id }}" alt="{{ image.name }}" class="responsive-image">
+                <img src="https://drive.google.com/uc?export=view&id={{ image.id }}" alt="{{ image.name }}"
+                    class="responsive-image">
             </li>
             {% endfor %}
         </ul>
 
         <input type="text" name="phone_number" placeholder="Digite o número de telefone">
 
-        <input type="submit" value="Copiar Imagens Selecionadas">
-    </form>
+        <!-- Botão para copiar as imagens -->
+        <input type="submit" formaction="/copy_selected_images" value="Copiar Imagens Selecionadas">
 
-    
+        <!-- Botão para comprar as imagens (modificado) -->
+        <button type="button" onclick="purchaseImages()">Comprar Imagens Selecionadas</button>
+
+       
+    </form>
+   
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </body>
 
