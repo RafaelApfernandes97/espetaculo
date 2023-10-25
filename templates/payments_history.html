@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Pagamentos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Histórico de Pagamentos</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>CPF ou CNPJ</th>
+            <th>Payment ID</th>
+            <th>Status</th>
+            <th>Descrição</th>
+            <th>Data de Criação</th>
+            <th>Valor da Transação</th>
+            <th>Metodo de pagamento</th>
+            <th>Nome do Portador do Cartão</th>
+            <th>Últimos 4 dígitos do Cartão</th>
+            <th>Email do Pagador</th>
+            <th>Link da Pasta no Drive</th>
+            <!-- Você pode continuar adicionando mais colunas aqui -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for payment in payments %}
+        <tr>
+            <td>{{ payment.payer.identification.number }}</td>
+            <td>{{ payment.id }}</td>
+            <td>{{ payment.status }}</td>
+            <td>{{ payment.description }}</td>
+            <td>{{ payment.date_created }}</td>
+            <td>{{ payment.transaction_amount }}</td>
+            <td>{{ payment.payment_method_id }}</td>
+            <td>
+                {% if payment.card and payment.card.cardholder and payment.card.cardholder.name %}
+                    {{ payment.card.cardholder.name }}
+                {% else %}
+                    Nome não disponível
+                {% endif %}
+                </td>
+
+            <td>{{ payment.card.last_four_digits }}</td>
+            <td>{{ payment.payer.email }}</td>
+            <td><a href="{{ payment.drive_folder_link }}" target="_blank">Acessar Pasta</a></td>
+
+            <!-- Você pode continuar adicionando mais dados aqui -->
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

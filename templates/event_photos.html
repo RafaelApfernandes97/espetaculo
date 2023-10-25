@@ -54,7 +54,9 @@
             {% endfor %}
         </ul>
 
-        <input type="text" name="phone_number" placeholder="Digite o número de telefone">
+        <input type="text" name="phone_number" placeholder="Digite o número de telefone" required>
+        <input type="email" name="email_address" placeholder="Digite o seu e-mail" required>
+
 
         <!-- Botão para copiar as imagens -->
         <input type="submit" formaction="/copy_selected_images" value="Copiar Imagens Selecionadas">

@@ -1,0 +1,35 @@
+{'status': 200, 'response': {'accounts_info': None, 'acquirer_reconciliation': [], 'additional_info': {'authentication_code': None, 'available_balance': None, 'ip_address': '201.43.185.138', 'items': [
+                {'category_id': None, 'description': None, 'id': None, 'picture_url': None, 'quantity': '2', 'title': 'Compra de imagens', 'unit_price': '10'
+                }
+            ], 'nsu_processadora': None
+        }, 'authorization_code': '229549003', 'binary_mode': False, 'brand_id': None, 'build_version': '3.23.2', 'call_for_authorize_id': None, 'captured': True, 'card': {'cardholder': {'identification': {'number': '12345678909', 'type': 'CPF'
+                }, 'name': 'APRO'
+            }, 'date_created': '2023-10-25T13: 29: 35.000-04: 00', 'date_last_updated': '2023-10-25T13: 29: 35.000-04: 00', 'expiration_month': 11, 'expiration_year': 2025, 'first_six_digits': '503143', 'id': None, 'last_four_digits': '6351'
+        }, 'charges_details': [
+            {'accounts': {'from': 'collector', 'to': 'mp'
+                }, 'amounts': {'original': 1, 'refunded': 0
+                }, 'client_id': 0, 'date_created': '2023-10-25T13: 29: 35.000-04: 00', 'id': '1319124781-001', 'last_updated': '2023-10-25T13: 29: 35.000-04: 00', 'metadata': {}, 'name': 'mercadopago_fee', 'refund_charges': [], 'reserve_id': None, 'type': 'fee'
+            },
+            {'accounts': {'from': 'payer', 'to': 'mp'
+                }, 'amounts': {'original': 2.17, 'refunded': 0
+                }, 'client_id': 0, 'date_created': '2023-10-25T13: 29: 35.000-04: 00', 'id': '1319124781-002', 'last_updated': '2023-10-25T13: 29: 35.000-04: 00', 'metadata': {}, 'name': 'financing_fee', 'refund_charges': [], 'reserve_id': None, 'type': 'fee'
+            }
+        ], 'collector_id': 1337843977, 'corporation_id': None, 'counter_currency': None, 'coupon_amount': 0, 'currency_id': 'BRL', 'date_approved': '2023-10-25T13: 29: 36.112-04: 00', 'date_created': '2023-10-25T13: 29: 35.858-04: 00', 'date_last_updated': '2023-10-25T13: 29: 36.112-04: 00', 'date_of_expiration': None, 'deduction_schema': None, 'description': 'Compra de imagens', 'differential_pricing_id': None, 'external_reference': None, 'fee_details': [
+            {'amount': 2.17, 'fee_payer': 'payer', 'type': 'financing_fee'
+            },
+            {'amount': 1, 'fee_payer': 'collector', 'type': 'mercadopago_fee'
+            }
+        ], 'financing_group': None, 'id': 1319124781, 'installments': 4, 'integrator_id': None, 'issuer_id': '24', 'live_mode': False, 'marketplace_owner': None, 'merchant_account_id': None, 'merchant_number': None, 'metadata': {}, 'money_release_date': '2023-10-25T13: 29: 36.112-04: 00', 'money_release_schema': None, 'money_release_status': 'released', 'notification_url': None, 'operation_type': 'regular_payment', 'order': {'id': '12783028833', 'type': 'mercadopago'
+        }, 'payer': {'identification': {'number': '32659430', 'type': 'DNI'
+            }, 'entity_type': None, 'phone': {'number': None, 'extension': None, 'area_code': None
+            }, 'last_name': None, 'id': '1524621508', 'type': None, 'first_name': None, 'email': 'test_user_80507629@testuser.com'
+        }, 'payment_method': {'data': {'routing_data': {'merchant_account_id': '60272716'
+                }
+            }, 'id': 'master', 'issuer_id': '24', 'type': 'credit_card'
+        }, 'payment_method_id': 'master', 'payment_type_id': 'credit_card', 'platform_id': None, 'point_of_interaction': {'business_info': {'sub_unit': 'checkout_pro', 'unit': 'online_payments'
+            }, 'transaction_data': {'e2e_id': None
+            }, 'type': 'CHECKOUT'
+        }, 'pos_id': None, 'processing_mode': 'aggregator', 'refunds': [], 'shipping_amount': 0, 'sponsor_id': None, 'statement_descriptor': None, 'status': 'approved', 'status_detail': 'accredited', 'store_id': None, 'tags': None, 'taxes_amount': 0, 'transaction_amount': 20, 'transaction_amount_refunded': 0, 'transaction_details': {'acquirer_reference': None, 'external_resource_url': None, 'financial_institution': None, 'installment_amount': 5.54, 'net_received_amount': 19, 'overpaid_amount': 0, 'payable_deferral_period': None, 'payment_method_reference_id': None, 'total_paid_amount': 22.17
+        }
+    }
+}
