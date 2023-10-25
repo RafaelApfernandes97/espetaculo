@@ -5,7 +5,7 @@ from flask_httpauth import HTTPBasicAuth
 import mercadopago
 from pymongo import MongoClient, server_api
 from flask_cors import CORS
-
+from flask_cors import cross_origin
 
 import re
 
@@ -39,6 +39,7 @@ sdk = mercadopago.SDK(ACCESS_TOKEN)
 
 
 @app.route('/purchase_images', methods=['POST'])
+@cross_origin()
 def purchase_images():
     selected_images = request.form.getlist('selected_images')
     
@@ -81,7 +82,8 @@ def purchase_images():
         db.temp_payment_data.update_one({"_id": preference['id']}, {"$set": temp_data})
 
     if 'init_point' in preference:
-        return redirect(preference['init_point'])
+        print('olha',preference['init_point'])
+        return jsonify({"redirect_url": preference['init_point']})
     else:
         return "Erro ao criar preferência de pagamento."
 
@@ -97,7 +99,8 @@ def payment_success():
         return jsonify({"error": "Payment ID not provided or payment not approved."}), 400
 
     payment_info = sdk.payment().get(payment_id)
-    if payment_info.get('status') == 'approved':
+    print(payment_info)
+    if payment_info['response'].get('status') == 'approved':
         # Recuperar phone_number e selected_images do banco de dados
         temp_data = db.temp_payment_data.find_one({"_id": preference_id})
         if not temp_data:
